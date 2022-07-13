@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>hello</title>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+                color: #222;
+            }
+
+            .wrapper {
+                max-width: 1160px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <my-counter>
+                lakejfa;lkjfea;lkj
+            </my-counter>
+        </div>
+    </body>
+    <script>
+        (function() {
+          console.log('hiya');
+          if ('customElements' in window) {
+
+            class MyCounter extends HTMLElement {
+
+              static properties = {
+                count: {}
+              }
+
+              constructor() {
+                super();
+
+                this.count = 0;
+
+                this.attachShadow({ mode: 'open' })
+
+                const button = document.createElement('button')
+                const minus = document.createTextNode('+')
+                button.appendChild(minus)
+
+                //return html`
+                  //<button>-</button>
+                  //${this.count}
+                  //<button>+</button>
+                //`
+
+                this.shadowRoot.append(button)
+              }
+            }
+
+            window.addEventListener('DOMContentLoaded', () => {
+              window.customElements.define('my-counter', MyCounter)
+            })
+          }
+        })();
+    </script>
+</html>
