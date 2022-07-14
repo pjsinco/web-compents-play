@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>popup-info</title>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+                color: #222;
+            }
+            .wrapper {
+                max-width: 1160px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Popup-info widget - web components</h1>
+
+            <form>
+                <div>
+                    <label for="">Enter your CVC <popup-info img="images/alt.png" data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card."></popup-info></label>
+                    <input type="text" name="cvc" id="cvc">
+                </div>
+
+            </form>
+        </div>
+
+        <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>
